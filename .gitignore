@@ -1,0 +1,57 @@
+# .gitignore for Blazor, .NET, and Visual Studio
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET/Blazor publish
+wwwroot/dist/
+wwwroot/node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+# NuGet Packages folder can be ignored if packages are restored on build
+packages/
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.swp
+*.tmp
+
+# Node.js (if using npm/yarn for frontend)
+node_modules/
+
+# Environment files
+.env
+.env.*
+
+# Test results
+TestResults/
+
+# Coverage reports
+coverage/
+
+# Local secrets
+secrets.json
