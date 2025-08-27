@@ -5,6 +5,47 @@ namespace GarageManagement.SampleData.SampleDataProviders;
 
 public static class SampleDataProvider
 {
+
+    #region Users
+
+    public static List<User> SampleUsers { get; } =
+    [
+        new User
+        {
+            Id = 1,
+            Username = "admin",
+            FirstName = "System",
+            LastName = "Admin",
+            Role = UserRole.Admin,
+            Password = "admin123!",
+            IsActive = true
+        },
+        new User
+        {
+            Id = 2,
+            Username = "manager",
+            FirstName = "Operations",
+            LastName = "Manager",
+            Role = UserRole.Manager,
+            Password = "manager123!",
+            IsActive = true
+        },
+        new User
+        {
+            Id = 3,
+            Username = "advisor",
+            FirstName = "Service",
+            LastName = "Advisor",
+            Role = UserRole.ServiceAdvisor,
+            Password = "advisor123!",
+            IsActive = true
+        }
+    ];
+
+    #endregion
+
+    #region Vehicles
+
     public static List<Vehicle> SampleVehicles { get; } =
     [
         new Vehicle
@@ -41,6 +82,9 @@ public static class SampleDataProvider
 
     ];
 
+    #endregion
+
+    #region Customers
 
     public static List<Customer> SampleCustomers { get; } =
     [
@@ -74,6 +118,10 @@ public static class SampleDataProvider
         }
     ];
 
+    #endregion
+
+    #region Vehicle Ownership
+
     public static List<VehicleOwnership> SampleVehicleOwnerships { get; } =
     [
         new VehicleOwnership
@@ -98,4 +146,38 @@ public static class SampleDataProvider
             IsCurrentOwner = true
         }
     ];
+
+    #endregion
+
+    #region Mechanics
+
+    public static List<Mechanic> SampleMechanics { get; } =
+    [
+        new Mechanic
+        {
+            Id = 1,
+            FirstName = "Alex",
+            LastName = "Turner",
+            Specializations = ["Engine", "Diagnostics"],
+            IsActive = true
+        },
+        new Mechanic
+        {
+            Id = 2,
+            FirstName = "Maria",
+            LastName = "Gonzalez",
+            Specializations = ["Transmission", "Suspension"],
+            IsActive = true
+        },
+        new Mechanic
+        {
+            Id = 3,
+            FirstName = "Liam",
+            LastName = "Nguyen",
+            Specializations = ["Electrical", "Air Conditioning"],
+            IsActive = true
+        }
+    ];
+
+    #endregion
 }
